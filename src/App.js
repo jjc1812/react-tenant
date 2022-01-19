@@ -1,9 +1,11 @@
 import React from 'react';
 import { Service } from './Service';
+import AddTenant from './component/AddTenant';
 
 function App() {
 
   const [list, setList]= React.useState([])
+  const [show, setShow]= React.useState(false)
 
   React.useEffect(() => {
     setList(Service.getTenants())
@@ -50,29 +52,11 @@ function App() {
           </table>
         </div>
         <div className="container">
-          <button className="btn btn-secondary">Add Tenant</button>
+          <button onClick={()=>setShow(!show)} className="btn btn-secondary">Add Tenant</button>
         </div>
-        <div className="container">
-          <form>
-            <div className="form-group">
-              <label>Name</label>
-              <input className="form-control"/>
-            </div>
-            <div className="form-group">
-              <label>Payment Status</label>
-              <select className="form-control">
-                <option>CURRENT</option>
-                <option>LATE</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label>Lease End Date</label>
-              <input className="form-control"/>
-            </div>
-            <button className="btn btn-primary">Save</button>
-            <button className="btn">Cancel</button>
-          </form>
-        </div>
+        {show?(
+        <AddTenant />
+        ):null}
       </>
   );
 }

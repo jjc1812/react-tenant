@@ -59,11 +59,7 @@ const deleteTenant = (id) => {
 
 export const Service = {
   getTenants: () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(function () {
-        networkError() ? reject("Network Error!") : resolve([...tenants]);
-      }, randomResponseTime());
-    });
+    return [...tenants]
   },
   addTenant: (tenant) => {
     return new Promise((resolve, reject) => {

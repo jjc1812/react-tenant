@@ -39,3 +39,14 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+Cosas que haria si tuviera mas tiempo:
+
+1- Utilizar la tabla de Material Design con paginado, filtro y sort.
+2- Crear un componente Datatable donde este la tabla solamente.
+3- Hacer un archivo de constantes.
+4- Usar react-redux para las llamadas del service.
+5- Incorporar una progress-bar para la carga de la pagina.
+6- Terminar el boton de submit del form.
+7- Testear cada componente.
+8- Documentar todo el flujo.
